@@ -1,2 +1,9 @@
+# Dependency directory
 node_modules
+
+# Dynamically processed files
 build
+coverage
+
+# Mocks
+mocks/development/
