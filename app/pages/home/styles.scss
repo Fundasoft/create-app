@@ -1,0 +1,13 @@
+@import '../../styles/normalize';
+@import '../../components/header/index';
+
+@import '../../styles/overrides';
+
+.home {
+  color: rgba(0, 0, 0, 0.8);
+
+  .container {
+    display: flex;
+    padding: 20px;
+  }
+}
