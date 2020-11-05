@@ -4,7 +4,7 @@
 #### Tecnologías en las que se basa
 `create-app` está pensado para construir aplicaciones `React` e implementa `Server Side Rendering (SSR)` por defecto, `Node` como tecnología de `Backend For Frontend (BFF)` y `Jest` como herramienta de testing.
 
-|Módulos más importantes|
+|Módulos principales|
 |-------------------|
 |[Node.js](https://github.com/nodejs/node)|
 |[Express.js](https://github.com/expressjs/express)|
@@ -25,7 +25,7 @@
 * Modular
 * Seguro
 
-#### Estructura general y directorios más importantes
+#### Estructura general y directorios principales
 ```
 ├── index.js  (Entry point donde se inicializa el server)
 │
@@ -77,8 +77,6 @@
 │   ├── development.js
 │   └── test.js
 │
-├── commands/
-│
 ├── tests/ (Tests e2e y unitarios de cada página)
 │
 ├── coverage/  ([gitignored] Carpeta dinámica de reportes de cobertura de tests)
@@ -121,25 +119,26 @@ Cuando se terminen de instalar las dependencias ejecutamos el comando
 ```
 npm run build
 ```
-Esto va a buildear la app preparando los archivos necesarios para ejecutar la app. Para permanentemente estar escuchando los cambios que se hacen y buildear automáticamente sin tener que volver a lanzar el comando de buildeo podemos ejecutar lo siguiente
+Esto va a buildear la app preparando los archivos necesarios para ejecutar la app. Para que automaticamente se buildee la app ante un cambio podemos ejecutar el siguiente comando
 ```
 npm run watch
 ```
 
-En otra consola ejecutamos el comando para iniciar el servidor de desarrollo
+En otra consola ejecutamos el siguiente comando para iniciar el servidor de desarrollo
 ```
 npm run start-dev
 ```
-Si no dio ningún error y se terminaron de ejecutar los comandos en nuestro navegador abrimos la url [http://localhost:3000/demo](http://localhost:3000/demo). Veremos lo que se muestra en la imagen a continuación que es una app demo que hace llamadas a una api placeholder de ejemplo ([https://api.chucknorris.io](https://api.chucknorris.io)), si, nos devuelve chistes de Chuck Norris *- Él seguramente lo aprueba -* y tiene un botón para renovar los chistes, demostrando que la aplicación es Server Side y Client Side.
 
-![App corriendo](https://user-images.githubusercontent.com/2653750/98190542-00414e00-1ef6-11eb-8b37-ceacc12b0d0d.png)
+Si no dio ningún error hasta esta insancia, vamos a nuestro navegador preferido y abrimos la url [http://localhost:3000/demo](http://localhost:3000/demo), veremos la app demo (como se muestra en la imagen) que hace llamadas a una API placeholder ([https://api.chucknorris.io](https://api.chucknorris.io)). Si, esta api devuelve chistes de Chuck Norris *- Él seguramente lo aprueba -* , vemos que el front tiene un botón que renueva los chistes haciendo una llamada nuevamente a la API, demostrando que la aplicación es Server Side y Client Side.
+
+![App corriendo](https://user-images.githubusercontent.com/2653750/98193288-91ff8a00-1efb-11eb-9af1-d7cf6969aaeb.png)
 
 Para correr los tests unitarios de la aplicación (viene con algunos de ejemplo)
 ```
 npm run test:unit
 ```
 
-# ¿Cómo colaborar en el proyecto?
+# ¿Cómo colaborar?
 Si se te ocurre una funcionalidad que estaría buena agregar o un bug que encontraste por favor levantá un [issue](https://github.com/Fundasoft/create-app/issues) describiendo el caso con detalle.
 
-Si se obtiene concenso entre los mantainers del proyecto de que es algo necesario para agregar/arreglar enviar un `PR` que apunte a `develop` con las modificaciones (acordate de linkear el issue en al `PR`) para su revisión.
+Si se obtiene concenso entre los mantainers del proyecto de que es algo necesario para agregar/arreglar, enviar un `PR` que apunte a `develop` con las modificaciones (acordate de linkear el issue en al `PR`) para su revisión.
