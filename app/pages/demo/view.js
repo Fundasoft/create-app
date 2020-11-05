@@ -9,11 +9,11 @@ const restclient = axios.create({
   timeout: 5000,
 });
 
-const Home = ({ message }) => {
+const Demo = ({ message }) => {
   const [text, setText] = useState(message);
 
   return (
-    <div className="home">
+    <div className="demo">
       <Header />
       <div className="container">
         <span>{text}</span>
@@ -31,4 +31,4 @@ const Home = ({ message }) => {
   );
 };
 
-module.exports = Home;
+module.exports = Demo;

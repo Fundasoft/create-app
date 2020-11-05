@@ -11,7 +11,7 @@ const router = require('express').Router();
 /**
  * Routers
  */
-const home = require('../pages/home');
+const demo = require('../pages/demo');
 
 /**
  * Use route middlewares
@@ -21,12 +21,12 @@ const home = require('../pages/home');
 /**
  * Redirect
  */
-router.get('/', (req, res) => res.redirect('/home'));
+router.get('/', (req, res) => res.redirect('/demo'));
 
 /**
  * Mount routers
  */
-router.use('/home', home);
+router.use('/demo', demo);
 
 /**
  * Expose router

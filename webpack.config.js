@@ -15,7 +15,7 @@ const vendor = [
 module.exports = {
   entry: {
     vendor,
-    home: './app/client/home.js',
+    demo: './app/client/demo.js',
   },
   output: {
     path: path.resolve(__dirname, 'build'),

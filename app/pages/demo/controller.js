@@ -2,7 +2,7 @@
  * Module dependencies
  */
 const React = require('react');
-const view = require('./view.js');
+const view = require('./view');
 const renderView = require('../../utils/render-view');
 const demoService = require('../../../services/demo');
 
@@ -17,7 +17,7 @@ exports.getText = function getText(req, res, next) {
  */
 exports.render = function render(req, res) {
   const props = { message: res.locals.joke.value };
-  const config = { page: 'home' };
+  const config = { page: 'demo' };
   /**
    * Render View
    */
