@@ -5,7 +5,7 @@
 `create-app` está pensado para construir aplicaciones `React` e implementa `Server Side Rendering (SSR)` por defecto, `Node` como tecnología de `Backend For Frontend (BFF)` y `Jest` como herramienta de testing.
 
 #### Módulos más importantes
-|Módulos principales|
+|Módulo|
 |-------------------|
 |[Node.js](https://github.com/nodejs/node)|
 |[Express.js](https://github.com/expressjs/express)|
