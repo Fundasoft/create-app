@@ -135,6 +135,11 @@ Si no dio ningún error y se terminaron de ejecutar los comandos en nuestro nave
 
 ![App corriendo](https://user-images.githubusercontent.com/2653750/98190542-00414e00-1ef6-11eb-8b37-ceacc12b0d0d.png)
 
+Para correr los tests unitarios de la aplicación (viene con algunos de ejemplo)
+```
+npm run test:unit
+```
+
 # ¿Cómo colaborar en el proyecto?
 Si se te ocurre una funcionalidad que estaría buena agregar o un bug que encontraste por favor levantá un [issue](https://github.com/Fundasoft/create-app/issues) describiendo el caso con detalle.
 
