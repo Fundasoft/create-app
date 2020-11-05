@@ -133,7 +133,7 @@ Si no dio ningún error hasta esta insancia, vamos a nuestro navegador preferido
 
 ![App corriendo](https://user-images.githubusercontent.com/2653750/98193288-91ff8a00-1efb-11eb-9af1-d7cf6969aaeb.png)
 
-Para correr los tests unitarios de la aplicación (viene con algunos de ejemplo)
+Para ejecutar los tests unitarios automáticos de la aplicación (viene con algunos de ejemplo), ejecutar el siguiente comando
 ```
 npm run test:unit
 ```
