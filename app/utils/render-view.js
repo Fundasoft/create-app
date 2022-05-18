@@ -4,7 +4,7 @@ const path = require('path');
 const serialize = require('serialize-javascript');
 const manifest = require(path.resolve(__dirname, '../../build/manifest'));
 
-const render = (res, view, props, { page }) => {
+const render = (res, view, props, { page, title }) => {
   const View = view;
   const app = `
     <!DOCTYPE html>
@@ -18,7 +18,7 @@ const render = (res, view, props, { page }) => {
       <script>
         window.__PRELOADED_STATE__ = ${serialize(props, { isJSON: true })};
       </script>
-      <title>Document</title>
+      <title>${title}</title>
     </head>
     <body>
       <div id="app-content">${ReactDOMServer.renderToString(<View {...props} />)}</div>

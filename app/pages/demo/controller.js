@@ -17,7 +17,7 @@ exports.getText = function getText(req, res, next) {
  */
 exports.render = function render(req, res) {
   const props = { message: res.locals.joke.value };
-  const config = { page: 'demo' };
+  const config = { page: 'demo', title: 'Demo Page' };
   /**
    * Render View
    */

@@ -1,13 +1,14 @@
-const React = require('react');
-const { shallow } = require('enzyme');
+import React from 'react';
+import { mount } from '@cypress/react';
 
-const Component = require('..');
+import Component from '..';
 const props = {};
 
 describe('Header component', () => {
   it('Should render component correctly', () => {
-    const wrapper = shallow(<Component {...props} />);
-    expect(wrapper).toMatchSnapshot();
+    const wrapper = mount(<Component {...props} />);
+    cy.get('[data-testid=todo-list]').should('exist');
+    // snapshot here
   });
 
   // Example: pure js test
