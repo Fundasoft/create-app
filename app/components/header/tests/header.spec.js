@@ -5,10 +5,11 @@ import Component from '..';
 const props = {};
 
 describe('Header component', () => {
+
   it('Should render component correctly', () => {
     const wrapper = mount(<Component {...props} />);
-    cy.get('[data-testid=todo-list]').should('exist');
-    // snapshot here
+    cy.get('[data-testid=header]').should('exist');
+    console.log(wrapper);
   });
 
   // Example: pure js test
@@ -16,6 +17,6 @@ describe('Header component', () => {
     const a = 2;
     const b = 3;
 
-    expect(a + b).toEqual(5);
+    expect(a + b).equal(5);
   });
 });

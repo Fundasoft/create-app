@@ -1,25 +1,21 @@
 const path = require('path');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const WebpackManifestPlugin = require('webpack-manifest-plugin')
+const TerserPlugin = require("terser-webpack-plugin");
+const { WebpackManifestPlugin } = require('webpack-manifest-plugin')
 const { SourceMapDevToolPlugin } = require('webpack');
 
 const isProduction = process.env.NODE_ENV === 'production';
 
-const vendor = [
-  'react',
-  'react-dom',
-  'axios',
-  'serialize-javascript',
-];
-
 module.exports = {
+  devtool: 'cheap-module-source-map',
   entry: {
-    vendor,
     demo: './app/client/demo.js',
   },
   output: {
     path: path.resolve(__dirname, 'build'),
+    publicPath: '',
     filename: isProduction ? '[name].[chunkhash:8].js' : '[name].js',
+    clean: true,
   },
   plugins: [
     new MiniCssExtractPlugin({
@@ -28,8 +24,9 @@ module.exports = {
     }),
     new WebpackManifestPlugin(),
     new SourceMapDevToolPlugin({
+      test: /\.js$/,
       filename: isProduction ? '[name].[chunkhash:8].js.map' : '[name].js.map',
-      exclude: ['vendor.js']
+      exclude: /vendor.*/, // not working
     }),    
   ],
   module: {
@@ -37,14 +34,7 @@ module.exports = {
       {
         test: /\.js$/,
         exclude: /node_modules/,
-        use: [
-          {
-            loader: 'babel-loader',
-            options: {
-              presets: ['@babel/preset-env'],
-            },
-          }
-        ],
+        use: [{ loader: 'babel-loader' }],
       },
       {
         test: /\.scss$/,
@@ -82,10 +72,16 @@ module.exports = {
       cacheGroups: {
         vendor: {
           test: /[\\/]node_modules[\\/]/,
-          name: 'vendors',
+          name: 'vendor',
           chunks: 'all'
         }
       }
-    }
+    },
+    minimize: isProduction,
+    minimizer: [
+      new TerserPlugin({
+        extractComments: false,
+      }),
+    ],
   },
 };

@@ -1,6 +1,7 @@
 const React = require('react');
 const Header = require('../../components/header');
 const axios = require('axios');
+const PropTypes = require('prop-types');
 
 const { useState } = React;
 
@@ -30,5 +31,9 @@ const Demo = ({ message }) => {
     </div>
   );
 };
+
+Demo.propTypes = {
+  message: PropTypes.string.isRequired,
+}
 
 module.exports = Demo;
