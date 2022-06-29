@@ -1,5 +1,4 @@
 const React = require('react');
-const controller = require('../../../app/pages/demo/controller');
 
 describe('Header component', () => {
    // Example: pure js test
@@ -7,6 +6,6 @@ describe('Header component', () => {
     const a = 2;
     const b = 3;
 
-    expect(a + b).toEqual(5);
+    expect(a + b).equal(5);
   });
 });

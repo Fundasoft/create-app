@@ -1,8 +1,10 @@
 /**
  * Module dependencies
  */
-const router = require('express').Router();
-const demo = require('./demo');
+ const express = require('express');
+ const demo = require('./demo');
+
+const router = express.Router();
 
 /**
  * Demo router
